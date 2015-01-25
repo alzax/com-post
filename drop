@@ -1,0 +1,12 @@
+#!/bin/bash
+DBU=$1
+DBP=$2
+#echo $DB
+echo "user: $DBU"
+echo "database: $DBU"
+echo "password: $DBP"
+
+#echo 'show tables ;' | mysql -h localhost -u'leopar7s_test' leopar7s_test -p'begett' | while read line ; do  echo "drop tables $line ;" | mysql -h localhost -u'leopar7s_test' leopar7s_test -p'begett' ; done 
+echo 'show tables ;' | mysql -u $DBU $DBU -p$DBP | while read line ; do  echo "drop tables $line ;" | mysql -u $DBU $DBU -p$DBP  ; done 
+
+
